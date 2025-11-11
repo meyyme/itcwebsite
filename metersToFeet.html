@@ -9,12 +9,67 @@
       font-family: "Georgia";
       color: rgb(48, 46, 46);
     }
+
+    input {
+      margin: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      color: green;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e0f0e0;
+    }
   </style>
 </head>
 <body>
 
-  <h2>kani kay v3</h2>
+  <h2>Meters to Feet</h2>
+  <p>Convert meters to feet here:</p>
 
+  <input id="meters" type="number" placeholder="Meters">
+  <br><br>
+  <button onclick="convertToFeet()">Convert</button>
+
+  <h3 id="result"></h3>
+  
+  <p>
+    <button onclick="window.location.href='csproject.html'"()"
+      style = "background-color: lightgreen;
+               text-align: center; 
+               color: black; 
+               padding: 10px 20px; 
+               border: none; 
+               border-radius: 8px; 
+               cursor: pointer;">
+      Go Back to Homepage
+    </button>
+
+
+  <script>
+
+    function convertToFeet() {
+      let meters = document.getElementById("meters").value;
+      if (meters == "") {
+        document.getElementById("result").innerHTML = "Please enter a value.";
+        return;
+      } 
+      let feet = (meters * 3.28084);
+      document.getElementById("result").innerHTML = 
+       meters + "m = " + feet.toFixed(2) + "ft";
+    }
+
+  </script>
 
 </body>
 </html>
