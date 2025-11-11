@@ -54,22 +54,19 @@
                cursor: pointer;">
       Go Back to Homepage
     </button>
-  </p>
 
-
-  <p id="result"></p>
 
   <script>
-    
+
     function convertToCelcius() {
-      let fahrenheit = document.getElementbyId("fahrenheit").value;
+      let fahrenheit = document.getElementById("fahrenheit").value;
       if (fahrenheit == "") {
         document.getElementById("result").innerHTML = "Please enter a value.";
         return;
       } 
       let celcius = (fahrenheit - 32) * 5 / 9;
       document.getElementById("result").innerHTML = 
-      fahrenheit + "°F = " + celcius.toFixed(2) + "°C";
+       fahrenheit + "°F = " + celcius.toFixed(2) + "°C";
     }
 
   </script>
