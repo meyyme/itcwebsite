@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fahrenheit to Celcius</title>
+  <title>Fahrenheit to Celsius</title>
   <style>
     body {
       background-color: lightgreen;
@@ -34,12 +34,12 @@
 </head>
 <body>
 
-  <h2>Fahrenheit to Celcius</h2>
-  <p>Convert fahrenheit to celcius here:</p>
+  <h2>Fahrenheit to Celsius</h2>
+  <p>Convert fahrenheit to celsius here:</p>
 
   <input id="fahrenheit" type="number" placeholder="Fahrenheit">
   <br><br>
-  <button onclick="convertToCelcius()">Convert</button>
+  <button onclick="convertToCelsius()">Convert</button>
 
   <h3 id="result"></h3>
   
@@ -58,15 +58,15 @@
 
   <script>
 
-    function convertToCelcius() {
+    function convertToCelsius() {
       let fahrenheit = document.getElementById("fahrenheit").value;
       if (fahrenheit == "") {
         document.getElementById("result").innerHTML = "Please enter a value.";
         return;
       } 
-      let celcius = (fahrenheit - 32) * 5 / 9;
+      let celsius = (fahrenheit - 32) * 5 / 9;
       document.getElementById("result").innerHTML = 
-       fahrenheit + "°F = " + celcius.toFixed(2) + "°C";
+       fahrenheit + "°F = " + celsius.toFixed(2) + "°C";
     }
 
   </script>
