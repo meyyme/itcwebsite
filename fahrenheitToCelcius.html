@@ -9,12 +9,72 @@
       font-family: "Georgia";
       color: rgb(48, 46, 46);
     }
+    
+    input {
+      margin: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      color: green;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e0f0e0;
+    }
   </style>
 </head>
 <body>
 
-  <h2>heh v2 pa</h2>
+  <h2>Fahrenheit to Celcius</h2>
+  <p>Convert fahrenheit to celcius here:</p>
 
+  <input id="num1" type="number" placeholder="First number">
+  <input id="num2" type="number" placeholder="Second number">
+  <br><br>
+
+  <button onclick="addNumbers()">Add</button>
+  
+  <p>
+    <button onclick="window.location.href='csproject.html'"()"
+      style = "background-color: lightgreen;
+               text-align: center; 
+               color: black; 
+               padding: 10px 20px; 
+               border: none; 
+               border-radius: 8px; 
+               cursor: pointer;">
+      Go Back to Homepage
+    </button>
+  </p>
+
+
+  <p id="result"></p>
+
+  <script>
+    function addNumbers() {
+      var num1 = document.getElementById("num1").value;
+      var num2 = document.getElementById("num2").value;
+
+      num1 = Number(num1);
+      num2 = Number(num2);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById("result").innerHTML = "Please enter valid numbers!";
+      } else {
+        var sum = num1 + num2;
+        document.getElementById("result").innerHTML = "Result: " + sum;
+      }
+    }
+  </script>
 
 </body>
 </html>
