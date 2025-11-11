@@ -37,11 +37,11 @@
   <h2>Fahrenheit to Celcius</h2>
   <p>Convert fahrenheit to celcius here:</p>
 
-  <input id="num1" type="number" placeholder="First number">
-  <input id="num2" type="number" placeholder="Second number">
+  <input id="fahrenheit" type="number" placeholder="Fahrenheit">
   <br><br>
+  <button onclick="convertToCelcius()">Convert</button>
 
-  <button onclick="addNumbers()">Add</button>
+  <h3 id="result"></h3>
   
   <p>
     <button onclick="window.location.href='csproject.html'"()"
@@ -60,20 +60,18 @@
   <p id="result"></p>
 
   <script>
-    function addNumbers() {
-      var num1 = document.getElementById("num1").value;
-      var num2 = document.getElementById("num2").value;
-
-      num1 = Number(num1);
-      num2 = Number(num2);
-
-      if (isNaN(num1) || isNaN(num2)) {
-        document.getElementById("result").innerHTML = "Please enter valid numbers!";
-      } else {
-        var sum = num1 + num2;
-        document.getElementById("result").innerHTML = "Result: " + sum;
-      }
+    
+    function convertToCelcius() {
+      let fahrenheit = document.getElementbyId("fahrenheit").value;
+      if (fahrenheit == "") {
+        document.getElementById("result").innerHTML = "Please enter a value.";
+        return;
+      } 
+      let celcius = (fahrenheit - 32) * 5 / 9;
+      document.getElementById("result").innerHTML = 
+      fahrenheit + "°F = " + celcius.toFixed(2) + "°C";
     }
+
   </script>
 
 </body>
