@@ -1,135 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <title>Introduction to Computing Website</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body {
     background-color: lightgreen;
     font-family: "Lato", sans-serif;
-    color: rgb(36, 34, 34);
+    margin: 0;
+    padding: 0;
 }
-.mySlides {display: none}
+
+/* Navbar */
+.w3-bar {
+    justify-content: center !important; 
+    background-color: black;
+}
+.w3-bar .w3-bar-item {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+}
+.w3-bar .w3-button {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.header-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff; 
+    margin: 190px 0 10px 0;
+    text-align: center;
+}
+
+.header-subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.assignments-center {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    text-align: left; 
+}
+
+
+.assignment-link {
+    display: block;
+    margin: 12px 0;
+    font-size: 22px;
+    color: white; 
+    text-decoration: none;
+    font-weight: normal; 
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.assignment-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #f0f0f0;
+}
+
+.w3-dropdown-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.w3-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%; 
+    top: 0;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.w3-dropdown-hover:hover .w3-dropdown-content {
+    display: block;
+}
+
+.w3-dropdown-content .assignment-link {
+    background-color: transparent; 
+    text-align: left;
+    font-size: 20px;
+}
+
+.w3-dropdown-content .assignment-link:hover {
+    background-color: #555; 
+    color: white; 
+}
+
 </style>
+</head>
+
 <body>
 
-<!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  <div class="w3-bar w3-black w3-card w3-center">
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
- 
-   
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More"> Conversion of Units <i class="fa fa-caret-down"></i></button>     
-           <div class="w3-dropdown-content w3-bar-block w3-card-4">
-             <a href="celsiusToFahrenheit.html" class="w3-bar-item w3-button">Celsius to Fahrenheit</a>
-             <a href="fahrenheitToCelcius.html" class="w3-bar-item w3-button">Fahrenheit to Celsius</a>
-             <a href="metersToFeet.html" class="w3-bar-item w3-button">Meters to Feet</a>
-             <a href="feetToMeters.html" class="w3-bar-item w3-button">Feet to Meters</a>
-      </div>
-    </div>
-
-         <div class="w3-dropdown-hover w3-hide-small">
-           <button class="w3-padding-large w3-button" title="More"> Income Tax Calculator <i class="fa fa-caret-down"></i></button>     
-              <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="incomeTaxCalculator.html" class="w3-bar-item w3-button">Income Tax Calculator</a>
-           </div>
-         </div>
-
-               <div class="w3-dropdown-hover w3-hide-small">
-                 <button class="w3-padding-large w3-button" title="More"> Factorials, Sums, and Averages using Loops <i class="fa fa-caret-down"></i></button>     
-                      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                        <a href="factorial.html" class="w3-bar-item w3-button">Factorial (While Loop) </a>
-                        <a href="sum.html" class="w3-bar-item w3-button">Sum (Do While Loop) </a>
-                        <a href="average.html" class="w3-bar-item w3-button">Average (For Loop) </a>
-                 </div>
-               </div>
-
-                              <div class="w3-dropdown-hover w3-hide-small">
-                                <button class="w3-padding-large w3-button" title="More"> Simple Payroll <i class="fa fa-caret-down"></i></button>     
-                                   <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                                     <a href="simplePayroll.html" class="w3-bar-item w3-button">Simple Payroll </a>
-                                </div>
-                              </div>
-
-   
-   
   </div>
 </div>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">The Course</a>
-</div>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-   <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">CS 1130 - Introduction to Computing</h2>
-    <p>This website is submmitted by Miami Patrice Pulido | BS in Computer Science - 1A</p>
-     <br>
-     <h2>
-     Student Assignments:  
-     </h2>
-      <br>
-      <h3>Assignment #1 - Conversion (Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, Feet to Meters)</h3>
-      <h3>Assignment #2 - Income Tax Calculator </h3>
-      <h3>Assignment #3 - Factorial (While Loop), Sum (Do While Loop) and Average (For Loop) of First N Natural Numbers</h3>
-      <h3>Assignment #4 - Simple Payroll </h3>
-
-      <br>
-      <h2>*** All Assignments are Due on November 15, 2025 *** </h2>
-      <h4> Upload and launch the pages in your specified github  or w3spaces website. </h4>
-     
+<h1 class="header-title">CS 1130 - Introduction to Computing</h1>
+<h3 class="header-subtitle">This website is submitted by Miami Patrice Pulido | BS in Computer Science - 1A</h3>
 
 
-  </div>
+<div class="assignments-center">
+  <h2 style="color:white; margin-bottom: 14px;">Student Assignments:</h2>
 
   
-<!-- End Page Content -->
+  <div class="w3-dropdown-hover" style="margin: 12px 0;">
+    <a class="assignment-link w3-button w3-round" style="background-color: transparent;">
+      Assignment #1 - Conversion <i class="fa fa-caret-right"></i>
+    </a>
+    <div class="w3-dropdown-content w3-card-4" style="text-align:left; background-color: transparent;">
+      <a href="celsiusToFahrenheit.html" class="assignment-link">Celsius to Fahrenheit</a>
+      <a href="fahrenheitToCelcius.html" class="assignment-link">Fahrenheit to Celsius</a>
+      <a href="metersToFeet.html" class="assignment-link">Meters to Feet</a>
+      <a href="feetToMeters.html" class="assignment-link">Feet to Meters</a>
+    </div>
+  </div>
+
+
+  <a href="incomeTaxCalculator.html" class="assignment-link">Assignment #2 - Income Tax Calculator</a>
+  <a href="factorialsumandaverage.html" class="assignment-link">Assignment #3 - Factorial (While Loop), Sum (Do While Loop) and Average (For Loop) of First N Natural Numbers</a>
+  <a href="simplePayroll.html" class="assignment-link">Assignment #4 - Simple Payroll</a>
 </div>
-
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
 
 </body>
 </html>
+
+
+
+
+
+

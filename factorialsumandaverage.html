@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Calculations</title>
+  <style>
+    body {
+      background-color: lightgreen;
+      font-family: Georgia, serif;
+      text-align: center;
+      color: rgb(48, 46, 46);
+      padding: 50px 0;
+    }
+
+    input {
+      padding: 10px;
+      width: 200px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background-color: white;
+      color: green;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #e0f0e0;
+    }
+
+    .back-btn {
+      background-color: rgb(60, 160, 60);
+      color: white;
+    }
+
+    .back-btn:hover {
+      background-color: rgb(50, 140, 50);
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Number Calculations</h2>
+  <p>Enter an integer value n:</p>
+
+  <input type="number" id="n" placeholder="Enter n">
+  <br>
+  <button onclick="calculate()">Compute</button>
+  <br>
+  <button class="back-btn" onclick="window.location.href='csproject.html'">Go Back to Homepage</button>
+
+  <h3 id="factorial"></h3>
+  <h3 id="sum"></h3>
+  <h3 id="average"></h3>
+
+  <script>
+    function calculate() {
+      let n = parseInt(document.getElementById("n").value);
+
+      if (isNaN(n) || n < 0) {
+        alert("Please enter a valid non-negative integer.");
+        return;
+      }
+
+      let factorial = 1;
+      let i = 1;
+      while (i <= n) {
+        factorial *= i;
+        i++;
+      }
+      document.getElementById("factorial").innerText = n + "! = " + factorial;
+
+      let sum = 0;
+      let j = 1;
+      if (n > 0) {
+        do {
+          sum += j;
+          j++;
+        } while (j <= n);
+      }
+      document.getElementById("sum").innerText = "Sum of first " + n + " numbers = " + sum;
+
+      let average = 0;
+      for (let k = 1; k <= n; k++) {
+        average += k;
+      }
+      if (n > 0) {
+        average = average / n;
+      }
+      document.getElementById("average").innerText = "Average of first " + n + " numbers = " + average;
+    }
+  </script>
+
+</body>
+</html>

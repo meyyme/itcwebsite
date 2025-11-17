@@ -2,16 +2,26 @@
 <html>
 <head>
   <title>Income Tax Calculator</title>
-  <style>
-    body {
-      background-color: lightgreen;
-      text-align: center;
-      font-family: "Georgia";
-      color: rgb(48, 46, 46);
-    }
-  </style>
+  <link rel="stylesheet" href="CSS/itcstyle.css">
+</head>
 <body>
 
+  <h2>Income Tax Calculator</h2>
+  <p>Input your Taxable Income to compute the income tax:</p>
+
+  <input id="income" type="number" placeholder="Enter Taxable Income">
+  <br><br>
+  <button onclick="computeIncomeTax()">Compute Tax</button>
+
+  <h3 id="result"></h3>
+
+  <button class="back-btn" onclick="window.location.href='csproject.html'">
+    Go Back to Homepage
+  </button>
+
+  <script src="Scriptss/inctaxcalc.js"></script>
+</body>
 </html>
+
 
     

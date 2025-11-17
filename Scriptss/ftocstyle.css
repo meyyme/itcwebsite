@@ -1,0 +1,64 @@
+body {
+  background-color: lightgreen;
+  font-family: "Georgia";
+  color: rgb(48, 46, 46);
+  text-align: center;
+  margin: 0;
+  padding: 40px 0;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 220px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.convert-btn {
+  background-color: white;
+  color: green;
+  margin-top: 5px;
+}
+
+.convert-btn:hover {
+  background-color: #e0f0e0;
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.back-btn {
+  margin-top: 30px;
+  background-color: rgb(60, 160, 60);
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: rgb(50, 140, 50);
+}
+
+

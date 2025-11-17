@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Payroll</title>
-  <style>
-    body {
-      background-color: lightgreen;
-      text-align: center;
-      font-family: "Georgia";
-      color: rgb(48, 46, 46);
-    }
-  </style>
+  <title>Payroll Manager</title>
+  <link rel="stylesheet" href="CSS/simpayrollstyle.css">
+</head>
 <body>
 
+  <h2>Payroll Manager</h2>
+
+  <input type="text" id="name" placeholder="Employee Name">
+  <input type="number" id="days" placeholder="Days Worked">
+  <input type="number" id="rate" placeholder="Daily Rate">
+  <input type="number" id="deduction" placeholder="Deduction Amount">
+  <br>
+  <button onclick="addEmployee()">Add Employee</button>
+  <button onclick="deleteEmployee()">Delete Employee</button>
+  <br>
+  <button class="back-btn" onclick="window.location.href='csproject.html'">Go Back to Homepage</button>
+
+  <table id="payrollTable">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Employee Name</th>
+        <th>Days Worked</th>
+        <th>Daily Rate</th>
+        <th>Gross Pay</th>
+        <th>Deduction Amount</th>
+        <th>Net Pay</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+  <script src="Scriptss/simpayroll.js"></script>
+</body>
 </html>
+
+
